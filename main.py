@@ -1,6 +1,7 @@
 import Izracun
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 
 L = 0.71
@@ -20,13 +21,15 @@ for x in xarray:
     result.append(y_ar)
 
 
-for x in result:
-    print(max(x))
+
 
 nparray = np.array(result)
 
 
 X, Y = np.meshgrid(xarray, yarray)
 ax = plt.contourf(Y,X, nparray,50)
-plt.savefig('C:/Users/Zver/Code/TP-1/fig.png')
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+plt.savefig(dir_path+'/fig1.png')
 
