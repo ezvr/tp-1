@@ -1,3 +1,3 @@
-import testFunction
+import Izracun
 
-print(testFunction.test_fuction())
+print(Izracun.izracun())
