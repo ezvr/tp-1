@@ -5,7 +5,7 @@ def entry():
     # TREBA NARDIT DA SE LAHKO VNESE PODATKE
     L = 0.70  # m
     W = 0.70  # m
-    step = 0.01
+    step = 0.05
 
     izrisi_graf(L, W, step)
 
@@ -30,10 +30,10 @@ def izrisi_graf(L: float, W: float, step: float):
 
     # Izrišemo graf
     plt.subplots()
-    plt.contourf(Y, X, nparray, 15, cmap='jet')
+    plt.contourf(Y, X, nparray, 8, cmap='jet')
     plt.grid(alpha=0.2)
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    cntr = plt.contour(Y, X, nparray, 15, colors='black', linewidths=.5)
+    cntr = plt.contour(Y, X, nparray, 8, colors='black', linewidths=.5)
 
     plt.clabel(cntr, inline_spacing=1, fmt='%.2f', fontsize=10)
 
