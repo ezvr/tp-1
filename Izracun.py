@@ -23,7 +23,7 @@ def izracun(x: float = 0, y: float = 0):
     C = np.sin((n * np.pi * x) / L)
     D = np.sinh((n * np.pi * y) / L)
 
-    T_x_y = (A / B) * C * D
+    T_x_y = T1 + (A / B) * C * D
 
     # n=1
 
