@@ -9,7 +9,6 @@ def izracun(x: float = 0, y: float = 0):
     y -- premik v y smeri [m] (default 0.0)
     """
 
-    print('jjaka')
 
     q = 15  # W/m2
     L = 0.7  # m
