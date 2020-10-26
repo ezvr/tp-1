@@ -29,11 +29,14 @@ def izrisi_graf(L: float, W: float, step: float):
     X, Y = np.meshgrid(xarray, yarray)
 
     # Izrišemo graf
-    plt.subplots()
-    plt.contourf(Y, X, nparray, 8, cmap='jet')
-    plt.grid(alpha=0.2)
+    plt.contourf(Y, X, nparray, 8, cmap='plasma')  # cmap -> barvna lestvica
+    plt.grid(alpha=0.2)  # alpha ->prosojnost črt
+    plt.xlabel('X-os')
+    plt.ylabel('Y-os')
+    plt.title('Jaka Purič, 23202024')
+    plt.colorbar()
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    cntr = plt.contour(Y, X, nparray, 8, colors='black', linewidths=.5)
+    cntr = plt.contour(Y, X, nparray, 8, colors='white', linewidths=.5)
 
     plt.clabel(cntr, inline_spacing=1, fmt='%.2f', fontsize=10)
 
