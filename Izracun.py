@@ -14,14 +14,18 @@ def izracun(x: float = 0, y: float = 0):
     q = 15  # W/m2
     L = 0.7  # m
     n = 1  # /
-    x = 0  # m
-    y = 0  # m
     T1 = 320  # K
     k = 0.35  # W/mK
+    W = 0.7  # m
+
+    A = 2 * q * L * (1 - (-1)**n)
+    B = k * n**2 * np.pi**2 * np.cosh((n * np.pi * W) / L)
+    C = np.sin((n * np.pi * x) / L)
+    D = np.sinh((n * np.pi * y) / L)
+
+    T_x_y = T1 + (A / B) * C * D
 
     # n=1
-    T_x_y = ((2*q*L*(1-(-1) ** n)) / (k*(n) ^ 2 *
-                                      (np.pi) ** 2 * np.cosh((n*np.pi * y)/L)))
 
     rezultat = T_x_y
 
