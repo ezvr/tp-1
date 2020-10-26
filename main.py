@@ -28,6 +28,7 @@ nparray = np.array(result)
 
 X, Y = np.meshgrid(xarray, yarray)
 ax = plt.contourf(Y,X, nparray,50)
+plt.grid(alpha = 0.2)
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
