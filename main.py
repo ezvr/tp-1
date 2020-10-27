@@ -42,12 +42,12 @@ def izrisi_graf(podatki, step: float,ime):
     plt.ylabel('Y-os')
     plt.title(ime)
     plt.colorbar()
-    dir_path = os.path.dirname(os.path.realpath(__file__))
     cntr = plt.contour(Y, X, nparray, 8, colors='white', linewidths=.5)
-
     plt.clabel(cntr, inline_spacing=1, fmt='%.2f', fontsize=10)
 
-    plt.savefig(dir_path+'/fig1.png')
+    #Shranimo graf v sliko
+    dir_path = os.path.dirname(os.path.realpath(__file__)) #Določimo mapo v kateri je main.py
+    plt.savefig(dir_path+'/fig1.png') #Shranimo v to mapo
 
 
 entry()
