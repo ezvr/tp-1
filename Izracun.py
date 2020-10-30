@@ -27,5 +27,8 @@ def izracun(x: float = 0, y: float = 0):
     # n=1
 
     rezultat = T_x_y
+    
 
+    
     return rezultat
+

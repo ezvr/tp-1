@@ -18,6 +18,7 @@ def izrisi_graf(L: float, W: float, step: float):
     xarray = np.arange(0, L+step, step)
     yarray = np.arange(0, W+step, step)
     result = []
+    
 
     # Pravilno oblikovanje podatkov
     for x in xarray:
@@ -27,20 +28,20 @@ def izrisi_graf(L: float, W: float, step: float):
         result.append(y_ar)
     nparray = np.array(result)
     X, Y = np.meshgrid(xarray, yarray)
+    
 
     # Izrišemo graf
-    plt.contourf(Y, X, nparray, 8, cmap='plasma')  # cmap -> barvna lestvica
+    plt.contourf(Y, X, nparray, 8, cmap='plasma')   # cmap -> barvna lestvica
     plt.grid(alpha=0.2)  # alpha ->prosojnost črt
-    plt.xlabel('X-os')
-    plt.ylabel('Y-os')
-    plt.title('Jaka Purič, 23202024')
-    plt.colorbar()
+    plt.xlabel('X-os')  # poimenovanje X osi
+    plt.ylabel('Y-os')  # poimenovanje Y osi
+    plt.title('Jaka Purič, 23202024')  # naslov grafikona
+    plt.colorbar()  # barvna skala na grafu
     dir_path = os.path.dirname(os.path.realpath(__file__))
     cntr = plt.contour(Y, X, nparray, 8, colors='white', linewidths=.5)
-
     plt.clabel(cntr, inline_spacing=1, fmt='%.2f', fontsize=10)
-
     plt.savefig(dir_path+'/fig1.png')
 
+    #plt.show() ->pokaže graf v novem oknu
 
 entry()
